@@ -1,0 +1,15 @@
+To add a new API source for jokes there is 3 steps which need to be taken.
+
+1)
+In /src/APIs, create a new .PHP file titled "API" followed by the number of which API it is. 
+Currently, there is 3 set API's. If you wish to include an API then the filename "Api4" is what it should be called.
+
+2)
+In /src/apiRan.PHP on line 3, increase the $max variable to match the amount of APIs in the system. 
+If you added one, then change the $max=3; to $max=4;
+
+3)
+In /src/apiRAN.PHP after line 12, create a new elseif statement. 
+This statement should identify the variable $num as equal to the number assigned to the API you have added. 
+Within the IF statement you should then add an include function which is set to the location of the new API added. 
+If a new API has been added then the elseif statement would follow as such: elseif ($num == "4") { include ('src/api4.php'); }

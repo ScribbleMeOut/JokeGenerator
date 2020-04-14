@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Vollkorn|Roboto);
+
+$color-background: #F5F5F5;
+$color-main: #FF5252;
+$color-active: #FFF;
+$color-link: #FFF;
+
+$button-height: 27px;
+$button-width: 35px;
+
+body {
+    background: $color-background;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 20%;
+    left: 0;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container2 {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    left: 0;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.jokes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 25%;
+    left: 0;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: $color-main;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    top: 5px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background: $color-main;
+        height: 2px;
+        width: 0%;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 0;
+        transition: .35s ease;
+    }
+
+    &:hover:after,
+    &:focus:after,
+    &:active:after {
+        width: 100%;
+    }
+}
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+}
+
+.button_container {
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    height: $button-height;
+    width: $button-width;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+
+    &:hover {
+        opacity: .7;
+    }
